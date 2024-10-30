@@ -7,14 +7,12 @@ const theme = {
         subheading: `Neue Haas Unica W1G Light, ${base.fonts?.body}, sans-serif`
     },
     colors: {
-        brand: {
             primaryBackground: '#FFFFFF',
             secondaryBackground: '#00000029',
             primaryText: '#000000',
             secondaryText: '#FFFFFF',
             primaryAccent: '#002345',
             secondaryAccent: '#52A6D7'
-        },
     },
 }
 
