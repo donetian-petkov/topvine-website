@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Neue Haas Unica W1G Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/NeueHaasUnicaW1G-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Neue Haas Unica W1G Light";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./assets/NeueHaasUnicaW1G-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Neue Haas Unica W1G Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./assets/NeueHaasUnicaW1G-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Neue Haas Unica W1G Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./assets/NeueHaasUnicaW1G-Bold.otf") format("opentype");
+}

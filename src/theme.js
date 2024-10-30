@@ -1,10 +1,10 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, theme as base } from "@chakra-ui/react";
 
 const theme = {
     fonts: {
-        heading: 'Neue Haas Unica W1G, Bold',
-        subheading: 'Neue Haas Unica W1G, Light',
-        body: 'Neue Haas Unica W1G, Medium',
+        heading: `'Neue Haas Unica W1G Bold', ${base.fonts?.heading}, sans-serif`,
+        body: `'Neue Haas Unica W1G Medium', ${base.fonts?.body}, sans-serif`,
+        subheading: `Neue Haas Unica W1G Light, ${base.fonts?.body}, sans-serif`
     },
     colors: {
         brand: {
@@ -16,14 +16,6 @@ const theme = {
             secondaryAccent: '#52A6D7'
         },
     },
-    sizes: {
-        xl: {
-            h: '56px',
-            fontSize: 'lg',
-            px: '32px',
-            bg: '#9747FF'
-        },
-    }
 }
 
 export default extendTheme(theme);
