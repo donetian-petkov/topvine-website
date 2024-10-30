@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Neue Haas Unica W1G';
-  src: url('/path-to-font/NeueHaasUnicaW1G.woff2') format('woff2'),
-  url('/path-to-font/NeueHaasUnicaW1G.woff') format('woff');
-  font-weight: 400; /* Adjust weight as needed */
-  font-style: normal;
-}
