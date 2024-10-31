@@ -2,9 +2,9 @@ import { extendTheme, theme as base } from "@chakra-ui/react";
 
 const theme = {
     fonts: {
-        title: `'Neue Haas Unica W1G Bold', ${base.fonts?.heading}, sans-serif`,
-        content: `'Neue Haas Unica W1G Medium', ${base.fonts?.body}, sans-serif`,
-        subtitle: `Neue Haas Unica W1G Light, ${base.fonts?.body}, sans-serif`
+        title: `'Neue Haas Unica W1G', ${base.fonts?.heading}, sans-serif`,
+        content: `'Neue Haas Unica W1G', ${base.fonts?.body}, sans-serif`,
+        subtitle: `Neue Haas Unica W1G, ${base.fonts?.body}, sans-serif`
     },
     colors: {
         backgroundMain: '#FFFFFF',
