@@ -1,21 +1,40 @@
-import {Image, InputGroup, Input, InputRightElement, Link, Flex, Button, HStack, Icon} from "@chakra-ui/react";
+import {
+    Image,
+    InputGroup,
+    Input,
+    InputRightElement,
+    Link,
+    Flex,
+    Button,
+    HStack,
+    Icon,
+    Container, Box
+} from "@chakra-ui/react";
 import logo from "../../assets/img/logo.svg";
 import {MenuIcon} from "../Icons/MenuIcon.jsx";
 import {UserIcon} from "../Icons/UserIcon.jsx";
 import {CartIcon} from "../Icons/CartIcon.jsx";
 import {SearchIcon} from "@chakra-ui/icons";
+import {useState} from "react";
+
 export const Header = () => {
+
+    const [isDrawerOpen, setDrawerOpen] = useState(false);
+
+    const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+
     return (
+        <>
         <Flex as="nav"
-                maxW="100%"
-                bg="accentPrimary"
-                color="backgroundSecondary"
-                fontFamily="body"
-                h="150px"
-                justifyContent={"center"}
-                alignItems={"center"}
-                display={"flex"}
-                gap={"60px"}
+              maxW="100%"
+              bg="accentPrimary"
+              color="backgroundSecondary"
+              fontFamily="body"
+              h="150px"
+              justifyContent={"center"}
+              alignItems={"center"}
+              display={"flex"}
+              gap={"60px"}
         >
             <Link href='https://chakra-ui.com' isExternal>
                 <Image
@@ -86,6 +105,7 @@ export const Header = () => {
                         color: "textSecondary",
                         textDecoration: "none",
                     }}
+                    onClick={toggleDrawer}
                 >
                     <MenuIcon
                         alt="menu"
@@ -96,5 +116,22 @@ export const Header = () => {
                 </Button>
             </HStack>
         </Flex>
+    {isDrawerOpen && (
+        <Box
+            position="absolute"
+            top="150px"  // Adjust to header height
+            left="0"
+            width="100%"
+            bg="gray.100"
+            boxShadow="md"
+            p={4}
+            zIndex="999"
+        >
+            <Button w="full" mb={2}>Option 1</Button>
+            <Button w="full" mb={2}>Option 2</Button>
+            <Button w="full">Option 3</Button>
+        </Box>
+    )}
+        </>
     )
 }
