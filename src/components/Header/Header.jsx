@@ -40,7 +40,7 @@ export const Header = () => {
                 maxW="100%"
                 bg="accentPrimary"
                 color="backgroundSecondary"
-                fontFamily="body"
+                fontFamily="content"
                 h="150px"
                 justifyContent="center"
                 alignItems="center"

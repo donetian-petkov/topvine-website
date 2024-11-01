@@ -1,57 +1,57 @@
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-    Container, Box,
+    Container, Box, Link, Heading,
 } from '@chakra-ui/react'
 
 export const DropdownMenu = () => {
 
+    const commonMenuStyles = {
+        display: "flex",
+        flexDirection: "column",
+        p: "10px",
+        fontSize: "16px",
+        fontFamily:"title",
+    }
+
+
     return (
         <Container maxW="100%">
-            <h1>Menu</h1>
-            <TableContainer p={0}>
-                    <Table variant='simple'>
-                        <TableCaption>Imperial to metric conversion factors</TableCaption>
-                        <Thead>
-                            <Tr>
-                                <Th>To convert</Th>
-                                <Th>into</Th>
-                                <Th isNumeric>multiply by</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            <Tr>
-                                <Td>inches</Td>
-                                <Td>millimetres (mm)</Td>
-                                <Td isNumeric>25.4</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>feet</Td>
-                                <Td>centimetres (cm)</Td>
-                                <Td isNumeric>30.48</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>yards</Td>
-                                <Td>metres (m)</Td>
-                                <Td isNumeric>0.91444</Td>
-                            </Tr>
-                        </Tbody>
-                        <Tfoot>
-                            <Tr>
-                                <Th>To convert</Th>
-                                <Th>into</Th>
-                                <Th isNumeric>multiply by</Th>
-                            </Tr>
-                        </Tfoot>
-                    </Table>
-            </TableContainer>
+            <Heading fontSize={"1.752rem"}>Menu</Heading>
+            <Container display={"flex"} flexDirection={"row"} justifyContent={"space-around"} margin={0}>
+                <Box {...commonMenuStyles}>
+                    <Link w={200} fontSize="19px" href="/" >Products</Link>
+                    <Link href="/" >Basket Strainers</Link>
+                    <Link href="/" >Commercial Reducers</Link>
+                    <Link href="/" >Modulating Float Valves</Link>
+                    <Link href="/" >Specialty Filters</Link>
+                    <Link href="/" >Sand Filters</Link>
+                    <Link href="/" >Spare Parts</Link>
+                </Box>
+                <Box {...commonMenuStyles}>
+                    <Link w={200} fontSize="19px" href="/" >Solutions</Link>
+                    <Link href="/" >Aquatic</Link>
+                    <Link href="/" >General Water</Link>
+                    <Link href="/" >Industrial</Link>
+                </Box>
+                <Box {...commonMenuStyles}>
+                    <Link w={200} fontSize="19px" href="/" >Design</Link>
+                    <Link href="/" >Strainer Basket Details</Link>
+                    <Link href="/" >Quality Control</Link>
+                    <Link href="/" >Our Design Process</Link>
+                    <Link href="/" >White Papers</Link>
+                </Box>
+                <Box {...commonMenuStyles}>
+                    <Link w={200} fontSize="19px" href="/" >Resources</Link>
+                    <Link href="/" >Blog</Link>
+
+                </Box>
+                <Box {...commonMenuStyles}>
+                    <Link w={200} fontSize="19px" href="/" >Company</Link>
+                    <Link href="/" > About Us</Link>
+                    <Link href="/" >Job Openings</Link>
+                    <Link href="/" >Contact Us</Link>
+                    <Link href="/" >Privacy Policy</Link>
+                </Box>
+            </Container>
         </Container>
 
 )
