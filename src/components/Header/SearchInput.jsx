@@ -3,7 +3,7 @@ import {SearchIcon} from "@chakra-ui/icons";
 
 export const SearchInput = () => {
     return (
-        <InputGroup w="351px" h="44px" color="textSecondary">
+        <InputGroup id="search-input" w="351px" h="44px" color="textSecondary">
             <Input
                 type="tel"
                 placeholder="Search product, model, sku, keyword…"

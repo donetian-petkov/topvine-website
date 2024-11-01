@@ -5,8 +5,8 @@ import {MenuIcon} from "../Icons/MenuIcon.jsx";
 import {CloseIcon} from "@chakra-ui/icons";
 
 export const NavMenu = ({
-    isDrawerOpen,
-    toggleDrawer
+                            isDrawerOpen,
+                            toggleDrawer
                         }) => {
 
     const commonLinkStyles = {
@@ -21,26 +21,28 @@ export const NavMenu = ({
     };
 
     return (
-        <HStack spacing="60px">
-            <Link href="/cart" {...commonLinkStyles}>
-                <CartIcon alt="cart" w="31px" h="27px" />
+        <HStack id="nav-menu" spacing="60px">
+
+            <Link id="cart" href="/cart" {...commonLinkStyles}>
+                <CartIcon alt="cart" w="31px" h="27px"/>
                 cart
             </Link>
 
-            <Link href="/login" {...commonLinkStyles}>
-                <UserIcon alt="login" w="31px" h="27px" />
+            <Link id="login" href="/login" {...commonLinkStyles}>
+                <UserIcon alt="login" w="31px" h="27px"/>
                 login
             </Link>
 
             <Button
+                id="menu"
                 variant="unstyled"
                 {...commonLinkStyles}
                 onClick={toggleDrawer}
             >
                 {!isDrawerOpen ? (
-                    <MenuIcon alt="menu" w="31px" h="27px" />
+                    <MenuIcon id="open-button" alt="menu" w="31px" h="27px"/>
                 ) : (
-                    <CloseIcon />
+                    <CloseIcon id="close-button"/>
                 )}
                 menu
             </Button>

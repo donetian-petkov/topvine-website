@@ -21,13 +21,19 @@ import {Logo} from "./Logo.jsx";
 import {SearchInput} from "./SearchInput.jsx";
 import {NavMenu} from "./NavMenu.jsx";
 
-export const Header = () => {
-    const [isDrawerOpen, setDrawerOpen] = useState(false);
-    const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+export const Header = (
+    {
+        isDrawerOpen,
+        setDrawerOpen,
+        toggleDrawer
+    }
+) => {
 
     return (
-        <Container maxW="100%" p="0" m="0">
+        <Container id="header" maxW="100%" p="0" m="0">
+
             <Flex
+                id="nav-bar"
                 as="nav"
                 maxW="100%"
                 bg="accentPrimary"
@@ -49,7 +55,7 @@ export const Header = () => {
             </Flex>
 
             {isDrawerOpen && (
-                <Box
+                <Box id="dropdown-menu"
                     position="absolute"
                     top="150px"
                     left="0"
