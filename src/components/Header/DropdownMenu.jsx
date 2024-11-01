@@ -16,7 +16,11 @@ export const DropdownMenu = () => {
     return (
         <Container maxW="100%">
             <Heading fontSize={"1.752rem"}>Menu</Heading>
-            <Container display={"flex"} flexDirection={"row"} justifyContent={"space-around"} margin={0}>
+            <Container display={"flex"}
+                       flexDirection={"row"}
+                       justifyContent={"space-around"}
+                       m={0}
+            p={0}>
                 <Box {...commonMenuStyles}>
                     <Link w={200} fontSize="19px" href="/" >Products</Link>
                     <Link href="/" >Basket Strainers</Link>
