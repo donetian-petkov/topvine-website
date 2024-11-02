@@ -1,10 +1,8 @@
 import './App.css'
 import {Header} from "./components/Header/Header.jsx";
-import {HeroSection} from "./components/HeroSection/HeroSection.jsx";
-import {Shop} from "./components/Shop/Shop.jsx";
-import {About} from "./components/About/About.jsx";
 import {Footer} from "./components/Footer/Footer.jsx";
 import {useEffect, useState} from "react";
+import {Main} from "./components/Main/Main.jsx";
 
 function App() {
 
@@ -21,7 +19,16 @@ function App() {
     const handleClick = (event) => {
         console.log(event.target)
         console.log(event.target.id)
-        if (!['plus','menu','dropdown-menu','open-button','close-button','products-menu','resources-menu','menu-title','design-menu','company-menu'].includes(event.target.id)) {
+        if (!['plus',
+            'menu',
+            'dropdown-menu',
+            'open-button',
+            'close-button',
+            'products-menu',
+            'resources-menu',
+            'menu-title',
+            'design-menu',
+            'company-menu'].includes(event.target.id)) {
             setDrawerOpen(false);
         }
     };
@@ -33,9 +40,7 @@ function App() {
                 setDrawerOpen={setDrawerOpen}
                 toggleDrawer={toggleDrawer}
             />
-            <HeroSection/>
-            <Shop/>
-            <About/>
+            <Main/>
             <Footer/>
         </>
     )

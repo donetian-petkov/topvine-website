@@ -1,21 +1,8 @@
 import {
-    Image,
-    InputGroup,
-    Input,
-    InputRightElement,
-    Link,
     Flex,
-    Button,
-    HStack,
     Container,
-    Box, Menu
+    Box,
 } from "@chakra-ui/react";
-import logo from "../../assets/img/logo.svg";
-import {MenuIcon} from "../Icons/MenuIcon.jsx";
-import {UserIcon} from "../Icons/UserIcon.jsx";
-import {CartIcon} from "../Icons/CartIcon.jsx";
-import {CloseIcon, SearchIcon} from "@chakra-ui/icons";
-import {useState} from "react";
 import {DropdownMenu} from "./DropdownMenu.jsx";
 import {Logo} from "./Logo.jsx";
 import {SearchInput} from "./SearchInput.jsx";
@@ -45,6 +32,7 @@ export const Header = (
                 gap="60px"
             >
                 <Logo/>
+
                 <SearchInput/>
 
                 <NavMenu
