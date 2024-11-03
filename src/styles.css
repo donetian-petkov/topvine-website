@@ -1,31 +1,31 @@
 @font-face {
-    font-family: "Neue Haas Unica W1G Regular";
+    font-family: "Neue Haas Unica W1G";
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url("./fonts/NeueHaasUnicaW1G-Regular.otf") format("opentype");
+    src: url("../public/fonts/NeueHaasUnicaW1G-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Neue Haas Unica W1G Light";
+    font-family: "Neue Haas Unica W1G";
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url("./fonts/NeueHaasUnicaW1G-Light.otf") format("opentype");
+    src: url("../public/fonts/NeueHaasUnicaW1G-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Neue Haas Unica W1G Medium";
+    font-family: "Neue Haas Unica W1G";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("./fonts/NeueHaasUnicaW1G-Medium.otf") format("opentype");
+    src: url("../public/fonts/NeueHaasUnicaW1G-Medium.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Neue Haas Unica W1G Bold";
+    font-family: "Neue Haas Unica W1G";
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-display: swap;
-    src: url("./fonts/NeueHaasUnicaW1G-Bold.otf") format("opentype");
+    src: url("../public/fonts/NeueHaasUnicaW1G-Bold.otf") format("opentype");
 }

@@ -9,7 +9,7 @@ export const DropdownMenu = () => {
         flexDirection: "column",
         p: "10px",
         fontSize: "16px",
-        fontFamily: "title",
+        fontFamily: "body",
     }
 
 

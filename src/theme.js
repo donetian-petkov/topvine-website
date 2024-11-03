@@ -2,9 +2,8 @@ import { extendTheme} from "@chakra-ui/react";
 
 const theme = {
     fonts: {
-        title: 'Neue Haas Unica W1G Bold, sans-serif',
-        content: 'Neue Haas Unica W1G Medium, sans-serif',
-        subtitle: 'Neue Haas Unica W1G Light, sans-serif'
+        body: 'Neue Haas Unica W1G, sans-serif',
+        heading: 'Neue Haas Unica W1G Medium, sans-serif',
     },
     colors: {
         backgroundMain: '#FFFFFF',
@@ -14,6 +13,12 @@ const theme = {
         accentPrimary: '#002345',
         accentSecondary: '#52A6D7'
     },
+    fontWeights: {
+        light: 300,
+        regular: 400,
+        medium: 500,
+        bold: 700,
+    }
 }
 
 export default extendTheme(theme);

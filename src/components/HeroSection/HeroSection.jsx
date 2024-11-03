@@ -2,12 +2,12 @@ import {Box, Image, Text} from "@chakra-ui/react";
 
 export const HeroSection = () => {
     return (
-        <Box fontFamily="title" letterSpacing="0.67px" lineHeight="52px">
+        <Box fontFamily="heading" lineHeight="52px" color="accentPrimary">
             <Image src="/img/hero.png"/>
-            <Text pos="absolute" top="198px" left="534px" width="604px" height="124x" color="accentPrimary" fontSize="40" fontWeight="bold" textAlign="right">
+            <Text pos="absolute" letterSpacing="0.67px" top="198px" left="450" width="700px" height="124x"  fontSize="49" fontWeight="bold" textAlign="right">
                 The Aquatic Professionals Number One Choice
             </Text>
-            <Text pos="absolute" top="314px" left="675px" width="463px" height="43px" color="red" fontSize="28px">
+            <Text pos="absolute" letterSpacing="-0.01px" top="290px" left="670" width="500" height="43px" fontSize="28" fontWeight="light">
                 For Strainers, Reducers & Float Valves
             </Text>
         </Box>
