@@ -14,13 +14,13 @@ export const Shop = () => {
                         Products</Button>
                 </Container>
             </Container>
-            <Text bg="acentPrimary" w="100%" textAlign="left">Product Categories</Text>
+            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
             <Container>
                 <Product></Product>
                 <Product></Product>
                 <Product></Product>
             </Container>
-            <Text>Product Categories</Text>
+            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
             <Container>
                 <Product></Product>
                 <Product></Product>
