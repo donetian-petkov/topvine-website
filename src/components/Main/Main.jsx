@@ -1,6 +1,6 @@
-import {HeroSection} from "../HeroSection/HeroSection.jsx";
-import {Shop} from "../Shop/Shop.jsx";
-import {About} from "../About/About.jsx";
+import {HeroSection} from "./HeroSection/HeroSection.jsx";
+import {Shop} from "./Shop/Shop.jsx";
+import {About} from "./About/About.jsx";
 import {Container} from "@chakra-ui/react";
 
 export const Main = () => {
