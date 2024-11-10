@@ -1,8 +1,5 @@
-import {Text, Box, Container, Button, Heading} from "@chakra-ui/react";
-
-function Product() {
-    return null;
-}
+import {Text, Box, Container, Button, Heading, HStack} from "@chakra-ui/react";
+import {Product} from "./Product/Product.jsx";
 
 export const Shop = () => {
     return (
@@ -15,17 +12,17 @@ export const Shop = () => {
                 </Container>
             </Container>
             <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
-            <Container>
+            <HStack>
                 <Product></Product>
                 <Product></Product>
                 <Product></Product>
-            </Container>
+            </HStack>
             <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
-            <Container>
+            <HStack>
                 <Product></Product>
                 <Product></Product>
                 <Product></Product>
-            </Container>
+            </HStack>
         </>
     )
 }
