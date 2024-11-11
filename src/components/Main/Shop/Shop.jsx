@@ -11,17 +11,17 @@ export const Shop = () => {
                         Products</Button>
                 </Container>
             </Container>
-            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
+            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px" pl="5">Product Categories</Text>
             <HStack>
-                <Product></Product>
-                <Product></Product>
-                <Product></Product>
+                <Product category="Aquatic" productImg="aquatic.png"></Product>
+                <Product category="General Water" productImg="generalWater.png"></Product>
+                <Product category="Industrial" productImg="industrial.png"></Product>
             </HStack>
-            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px">Product Categories</Text>
+            <Text alignContent="center" bg="accentPrimary" w="100%" textAlign="left" color="backgroundMain" borderRadius="8px" h="44px" pl="5">Product Categories</Text>
             <HStack>
-                <Product></Product>
-                <Product></Product>
-                <Product></Product>
+                <Product category="Aquatic" productImg="aquatic.png"></Product>
+                <Product category="General Water" productImg="generalWater.png"></Product>
+                <Product category="Industrial" productImg="industrial.png"></Product>
             </HStack>
         </>
     )
