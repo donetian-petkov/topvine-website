@@ -5,7 +5,7 @@ export const Product = ({
     productImg = "aquatic.png",
 }) => {
     return (
-        <Card w='100%' alignItems="center">
+        <Card w='100%' alignItems="center" variant="filled" bg="backgroundMain">
             <CardBody border="none" textAlign="center">
                 <Heading fontSize="24px">{category}</Heading>
                 <Text fontSize='24px'>Basket Strainers</Text>
@@ -15,7 +15,7 @@ export const Product = ({
                 />
             </CardBody>
             <CardFooter>
-                <Button variant='solid' colorScheme='blue'>
+                <Button bg="accentSecondary" color="backgroundMain" borderRadius="22px" w="330px">
                     View {category} Strainers
                 </Button>
             </CardFooter>
