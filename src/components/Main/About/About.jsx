@@ -1,57 +1,50 @@
-import {Container, Heading, Text, Image, HStack, VStack} from "@chakra-ui/react";
+import {Box, Heading, Text, Image, HStack, VStack, Button} from "@chakra-ui/react";
 
 export const About = () => {
     return (
-        <Container w="1200px" h="760px" m='0' alignItems="center" justifyContent="space-between">
-            <Heading>
+        <Box mt="50px" p="60px" bg="backgroundGray" textAlign="center" alignItems="center">
+            <Heading fontSize="26px" textAlign="start">
                 Why Trust Fluidtrol?
             </Heading>
-            <HStack textAlign="left" fontSize="16px" m="10px">
-                <VStack w="330px">
-                    <Text w="309px" fontWeight="bold">ISO 9001:2008 Certified </Text>
-                    <Text  w="309px"> Our quality system certification ensures the highest manufacturing standards. </Text>
-                    <Text  w="309px" fontWeight="bold">Expert Customization </Text>
-                    <Text  w="309px">We work with your design engineers to meet your exact requirements. </Text>
-                    <Text fontWeight="bold"  w="309px">99% On-Time Delivery </Text>
-                    <Text  w="309px"> We consider timely delivery a crucial part of our service to our customers. </Text>
-                    <Text fontWeight="bold"  w="309px"> Warehousing Inventory </Text>
-                    <Text  w="309px"> is managed on-site to reduce lead times and keep costs low.</Text>
+            <HStack textAlign="left" fontSize="16px" mt="50px" mb="50px">
+                <VStack w="330px" alignItems="baseline" >
+                    <Text fontWeight="bold">ISO 9001:2008 Certified </Text>
+                    <Text> Our quality system certification ensures the highest manufacturing
+                        standards. </Text>
+                    <Text fontWeight="bold">Expert Customization </Text>
+                    <Text>We work with your design engineers to meet your exact requirements. </Text>
+                    <Text fontWeight="bold">99% On-Time Delivery </Text>
+                    <Text> We consider timely delivery a crucial part of our service to our customers. </Text>
+                    <Text fontWeight="bold"> Warehousing Inventory </Text>
+                    <Text> is managed on-site to reduce lead times and keep costs low.</Text>
                 </VStack>
-                <VStack w="330px">
-                    <Text w="309px" fontWeight="bold">ISO 9001:2008 Certified </Text>
-                    <Text  w="309px"> Our quality system certification ensures the highest manufacturing standards. </Text>
-                    <Text  w="309px" fontWeight="bold">Expert Customization </Text>
-                    <Text  w="309px">We work with your design engineers to meet your exact requirements. </Text>
-                    <Text fontWeight="bold"  w="309px">99% On-Time Delivery </Text>
-                    <Text  w="309px"> We consider timely delivery a crucial part of our service to our customers. </Text>
-                    <Text fontWeight="bold"  w="309px"> Warehousing Inventory </Text>
-                    <Text  w="309px"> is managed on-site to reduce lead times and keep costs low.</Text>
-                </VStack>
-                <Image src="/img/about.png"/>
-            </HStack>
-            <HStack textAlign="left" fontSize="16px" m="10px">
-                <VStack w="330px">
-                    <Text w="309px" fontWeight="bold">ISO 9001:2008 Certified </Text>
-                    <Text  w="309px"> Our quality system certification ensures the highest manufacturing standards. </Text>
-                    <Text  w="309px" fontWeight="bold">Expert Customization </Text>
-                    <Text  w="309px">We work with your design engineers to meet your exact requirements. </Text>
-                    <Text fontWeight="bold"  w="309px">99% On-Time Delivery </Text>
-                    <Text  w="309px"> We consider timely delivery a crucial part of our service to our customers. </Text>
-                    <Text fontWeight="bold"  w="309px"> Warehousing Inventory </Text>
-                    <Text  w="309px"> is managed on-site to reduce lead times and keep costs low.</Text>
-                </VStack>
-                <VStack w="330px">
-                    <Text w="309px" fontWeight="bold">ISO 9001:2008 Certified </Text>
-                    <Text  w="309px"> Our quality system certification ensures the highest manufacturing standards. </Text>
-                    <Text  w="309px" fontWeight="bold">Expert Customization </Text>
-                    <Text  w="309px">We work with your design engineers to meet your exact requirements. </Text>
-                    <Text fontWeight="bold"  w="309px">99% On-Time Delivery </Text>
-                    <Text  w="309px"> We consider timely delivery a crucial part of our service to our customers. </Text>
-                    <Text fontWeight="bold"  w="309px"> Warehousing Inventory </Text>
-                    <Text  w="309px"> is managed on-site to reduce lead times and keep costs low.</Text>
+                <VStack w="330px" alignItems="baseline">
+                    <Text fontWeight="bold">Material Selection</Text>
+                    <Text>We use the highest quality PVC, CPVC, PP, PVDF, FRP, and Stainless Steels.</Text>
+                    <Text fontWeight="bold">We Test Everything</Text>
+                    <Text>Every basket and Wye strainer is hydro tested before leaving our facility.</Text>
+                    <Text fontWeight="bold">Long-Life Span </Text>
+                    <Text> We’ve been manufacturing innovative non-metallic strainers for over 20
+                        years.</Text>
+                    <Text fontWeight="bold">Wide Range of Sizes</Text>
+                    <Text>There’s virtually no limit to our vertical and horizontal strainers sizes.</Text>
                 </VStack>
                 <Image src="/img/about.png"/>
             </HStack>
-        </Container>
+            <Heading fontSize="24px" textAlign="center" color="accentPrimary">The Very Best in Customer Service, Customization, and Delivery</Heading>
+            <Button
+                bg="accentSecondary"
+                color="backgroundMain"
+                border="1px solid"
+                borderColor="accentSecondary"
+                borderRadius="22px"
+                w="330px"
+                mt="50px"
+                mb="50px"
+                _hover={{bg: "backgroundMain", color: "accentSecondary"}}
+            >
+                Contact Us
+            </Button>
+        </Box>
     )
 }
