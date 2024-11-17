@@ -6,7 +6,7 @@ import {
     Heading,
     Image,
     Link,
-    Text
+    Text,
 } from "@chakra-ui/react";
 
 export const Product = ({
@@ -34,7 +34,10 @@ export const Product = ({
                         borderColor="accentSecondary"
                         borderRadius="22px"
                         w="330px"
-                        _hover={{bg: "accentSecondary", color: "backgroundMain"}}
+                        _hover={{
+                            bg: "accentSecondary",
+                            color: "backgroundMain",
+                        }}
                     >
                         View {category} Strainers
                     </Button>
