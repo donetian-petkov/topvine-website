@@ -20,17 +20,13 @@ function App() {
     const handleClick = (event) => {
         console.log(event.target)
         console.log(event.target.id)
-        if (!['plus',
-            'menu',
-            'dropdown-menu',
-            'open-button',
-            'close-button',
-            'products-menu',
-            'resources-menu',
-            'menu-title',
-            'design-menu',
-            'company-menu',
-            'menu-button'].includes(event.target.id)) {
+        if (![/plus/,
+            /menu/,
+            /dropdown-menu/,
+            /open-button/,
+            /close-button/,
+            /category-.*/,
+            /menu-button/].find(string => string.test(event.target.id))) {
             setDrawerOpen(false);
         }
     };

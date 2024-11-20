@@ -7,7 +7,6 @@ import {DropdownMenu} from "./DropdownMenu.jsx";
 import {Logo} from "./Logo.jsx";
 import {SearchInput} from "./SearchInput.jsx";
 import {NavMenu} from "./NavMenu.jsx";
-import {DropdownMenuMobile} from "./DropdownMenuMobile.jsx";
 
 export const Header = (
     {
