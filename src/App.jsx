@@ -3,6 +3,7 @@ import {Header} from "./components/Header/Header.jsx";
 import {Footer} from "./components/Footer/Footer.jsx";
 import {useEffect, useState} from "react";
 import {Main} from "./components/Main/Main.jsx";
+import {Box} from "@chakra-ui/react";
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
     };
 
     return (
-        <>
+        <Box maxW={['0','430px','768px','992px','1200px']}>
             <Header
                 isDrawerOpen={isDrawerOpen}
                 setDrawerOpen={setDrawerOpen}
@@ -42,7 +43,7 @@ function App() {
             />
             <Main/>
             <Footer/>
-        </>
+        </Box>
     )
 }
 

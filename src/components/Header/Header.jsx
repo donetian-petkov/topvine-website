@@ -25,9 +25,10 @@ export const Header = (
                 bg="accentPrimary"
                 color="backgroundSecondary"
                 fontFamily="heading"
-                h="150px"
+                h={["150px"]}
                 justifyContent="center"
                 alignItems="center"
+                direction={['column','column','column','row']}
                 gap="60px"
             >
                 <Logo/>
