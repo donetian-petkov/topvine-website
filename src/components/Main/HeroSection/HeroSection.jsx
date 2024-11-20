@@ -9,9 +9,9 @@ export const HeroSection = () => {
                 letterSpacing="0.67px"
                 top="198px"
                 left="450"
-                width="700px"
+                width={["400px", "500px", "700px"]}
                 height="124px"
-                fontSize="49"
+                fontSize={[24, 30, 49]}
                 fontWeight="bold"
                 textAlign="right"
             >
@@ -24,7 +24,7 @@ export const HeroSection = () => {
                 left="670"
                 width="500"
                 height="43px"
-                fontSize="28"
+                fontSize={[16, 16, 28]}
                 fontWeight="light"
             >
                 For Strainers, Reducers & Float Valves
