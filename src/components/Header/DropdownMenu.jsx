@@ -3,6 +3,8 @@ import {
 } from '@chakra-ui/react';
 import {ChevronDownIcon, ChevronUpIcon} from '@chakra-ui/icons';
 import {useState} from 'react';
+import {DropdownMenuDesktop} from "./DropdownMenuDesktop.jsx";
+import {DropdownMenuMobile} from "./DropdownMenuMobile.jsx";
 
 export const DropdownMenu = () => {
     const commonMenuStyles = {
@@ -68,49 +70,9 @@ export const DropdownMenu = () => {
 
     return (
         !isSmallerThan430 ? (
-            <Container maxW="100%" justifyContent="center">
-                <Heading id="menu-title" fontSize={"1.752rem"} m={5}>Menu</Heading>
-                <Container display={"flex"}
-                           flexDirection={"row"}
-                           justifyContent={"space-around"}
-                           m={5}
-                           p={0}>
-                    {categories.map((category, index) => (
-                        <Box key={index} id="category-menu" {...commonMenuStyles} p={0}>
-                            <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading"
-                                  href="/">{category.name}</Link>
-                            {category.subcategories.map((subcategory, subIndex) => (
-                                <Link key={subIndex} href="/">{subcategory}</Link>
-                            ))}
-                        </Box>
-                    ))}
-                </Container>
-            </Container>
+            <DropdownMenuDesktop categories={categories} commonMenuStyles={commonMenuStyles}/>
         ) : (
-            <VStack id="dropdown-menu" align="center" spacing={4}>
-                {categories.map((category, index) => (
-                    <Box key={index} w="90%">
-                        <HStack justify="space-between" id="category-menu" borderBottom="2px solid #52A6D7" w="100%">
-                            <Text color="accentSecondary" id="category-text" fontWeight="bold">{category.name}</Text>
-                            <IconButton id="category-button"
-                                icon={openCategory === index ?
-                                    <ChevronUpIcon id="category-arrow-icon" color="accentSecondary"/> :
-                                    <ChevronDownIcon id="category-arrow-icon" color="accentSecondary"/>}
-                                onClick={() => toggleSubmenu(index)}
-                                variant="ghost"
-                                size="sm"
-                            />
-                        </HStack>
-                        {openCategory === index && (
-                            <VStack align="start" pl={4} spacing={2}>
-                                {category.subcategories.map((subcategory, subIndex) => (
-                                    <Text key={subIndex}>{subcategory}</Text>
-                                ))}
-                            </VStack>
-                        )}
-                    </Box>
-                ))}
-            </VStack>
+            <DropdownMenuMobile categories={categories} openCategory={openCategory} toggleSubmenu={toggleSubmenu}/>
         )
     );
 };
