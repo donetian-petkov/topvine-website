@@ -82,10 +82,6 @@ export const About = () => {
                 w="330px"
                 mt="50px"
                 mb="50px"
-                _hover={{
-                    bg: "backgroundMain",
-                    color: "accentSecondary",
-                }}
             >
                 Contact Us
             </Button>
