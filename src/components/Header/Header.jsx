@@ -1,12 +1,13 @@
 import {
     Flex,
     Container,
-    Box,
+    Box, useMediaQuery,
 } from "@chakra-ui/react";
 import {DropdownMenu} from "./DropdownMenu.jsx";
 import {Logo} from "./Logo.jsx";
 import {SearchInput} from "./SearchInput.jsx";
 import {NavMenu} from "./NavMenu.jsx";
+import {DropdownMenuMobile} from "./DropdownMenuMobile.jsx";
 
 export const Header = (
     {
@@ -15,6 +16,9 @@ export const Header = (
         toggleDrawer
     }
 ) => {
+
+    const [isSmallerThan430] = useMediaQuery('(max-width: 430px)');
+
 
     return (
         <Container as="header" id="header" maxW="100%" p="0" m="0" zIndex="9999" position="sticky" top={0}>
@@ -53,7 +57,13 @@ export const Header = (
                     p={4}
                     zIndex="999"
                 >
-                    <DropdownMenu/>
+                    {isSmallerThan430 ? (
+                        <DropdownMenuMobile/>
+                    )
+                    :(
+                            <DropdownMenu/>
+                        )}
+
                 </Box>
             )}
         </Container>
