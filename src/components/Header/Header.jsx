@@ -17,8 +17,7 @@ export const Header = (
 ) => {
 
     return (
-        <Container as="header" id="header" maxW="100%" p="0" m="0">
-
+        <Container as="header" id="header" maxW="100%" p="0" m="0" zIndex="9999" position="sticky" top={0}>
             <Flex
                 id="nav-bar"
                 as="nav"
