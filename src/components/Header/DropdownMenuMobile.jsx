@@ -7,7 +7,7 @@ export const DropdownMenuMobile = ({
                                        toggleSubmenu
                                    }) => {
     return (
-        <VStack id="dropdown-menu" align="center" spacing={4}>
+        <VStack id="dropdown-menu" align="center" spacing={4} fontSize="16px">
             {categories.map((category, index) => (
                 <Box key={index} w="90%">
                     <HStack justify="space-between" id="category-menu" borderBottom="2px solid #52A6D7" w="100%">
@@ -22,7 +22,7 @@ export const DropdownMenuMobile = ({
                         />
                     </HStack>
                     {openCategory === index && (
-                        <VStack align="start" pl={4} spacing={2}>
+                        <VStack align="start" lineHeight="15px">
                             {category.subcategories.map((subcategory, subIndex) => (
                                 <Text key={subIndex}>{subcategory}</Text>
                             ))}

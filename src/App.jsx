@@ -32,7 +32,7 @@ function App() {
     };
 
     return (
-        <Box maxW={['0', '430px', '768px', '992px', '1200px']}>
+        <Box maxW={['0', '431px', '768px', '992px', '1200px']}>
             <Header
                 isDrawerOpen={isDrawerOpen}
                 setDrawerOpen={setDrawerOpen}
