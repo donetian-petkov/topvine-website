@@ -8,6 +8,7 @@ export const Footer = () => {
             padding="60px"
             color="backgroundMain"
             justifyContent="space-between"
+            borderTop = "4px solid #FFAE00"
         >
             <Text color="backgroundPrimary" fontSize="12px">
                 © 2023 Fluidtrol Process Technologies, Inc. <br />
