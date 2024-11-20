@@ -1,63 +1,114 @@
 import {
-    Container, Box, Link, Heading,
-} from '@chakra-ui/react'
+    Container, Box, Link, Heading, useMediaQuery, VStack, HStack, Text, IconButton,
+} from '@chakra-ui/react';
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
 export const DropdownMenu = () => {
-
     const commonMenuStyles = {
         display: "flex",
         flexDirection: "column",
         p: "10px",
         fontSize: "16px",
         fontFamily: "body",
-    }
+    };
 
+    const categories = [
+        {
+            name: 'Products',
+            subcategories: [
+                'Basket Strainers',
+                'Commercial Reducers',
+                'Modulating Float Valves',
+                'Specialty Filters',
+                'Sand Filters',
+                'Spare Parts',
+            ],
+        },
+        {
+            name: 'Solutions',
+            subcategories: [
+                'Aquatic',
+                'General Water',
+                'Industrial',
+            ],
+        },
+        {
+            name: 'Design',
+            subcategories: [
+                'Strainer Basket Details',
+                'Quality Control',
+                'Our Design Process',
+                'White Papers',
+            ],
+        },
+        {
+            name: 'Resources',
+            subcategories: [
+                'Blog',
+            ],
+        },
+        {
+            name: 'Company',
+            subcategories: [
+                'About Us',
+                'Job Openings',
+                'Contact Us',
+                'Privacy Policy',
+            ],
+        },
+    ];
+
+    const [isSmallerThan430] = useMediaQuery('(max-width: 430px)');
+    const [openCategory, setOpenCategory] = useState(null);
+
+    const toggleSubmenu = (index) => {
+        setOpenCategory(openCategory === index ? null : index);
+    };
 
     return (
-        <Container maxW="100%" justifyContent="center">
-            <Heading id="menu-title" fontSize={"1.752rem"} m={5}>Menu</Heading>
-            <Container display={"flex"}
-                       flexDirection={"row"}
-                       justifyContent={"space-around"}
-                       m={5}
-                       p={0}>
-                <Box id="products-menu" {...commonMenuStyles} p={0}>
-                    <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading" href="/">Products</Link>
-                    <Link href="/">Basket Strainers</Link>
-                    <Link href="/">Commercial Reducers</Link>
-                    <Link href="/">Modulating Float Valves</Link>
-                    <Link href="/">Specialty Filters</Link>
-                    <Link href="/">Sand Filters</Link>
-                    <Link href="/">Spare Parts</Link>
-                </Box>
-                <Box id="solutions-menu" {...commonMenuStyles}>
-                    <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading" href="/">Solutions</Link>
-                    <Link href="/">Aquatic</Link>
-                    <Link href="/">General Water</Link>
-                    <Link href="/">Industrial</Link>
-                </Box>
-                <Box id="design-menu" {...commonMenuStyles}>
-                    <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading" href="/">Design</Link>
-                    <Link href="/">Strainer Basket Details</Link>
-                    <Link href="/">Quality Control</Link>
-                    <Link href="/">Our Design Process</Link>
-                    <Link href="/">White Papers</Link>
-                </Box>
-                <Box id="resources-menu" {...commonMenuStyles}>
-                    <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading" href="/">Resources</Link>
-                    <Link href="/">Blog</Link>
-
-                </Box>
-                <Box id="company-menu" {...commonMenuStyles}>
-                    <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading" href="/">Company</Link>
-                    <Link href="/"> About Us</Link>
-                    <Link href="/">Job Openings</Link>
-                    <Link href="/">Contact Us</Link>
-                    <Link href="/">Privacy Policy</Link>
-                </Box>
+        !isSmallerThan430 ? (
+            <Container maxW="100%" justifyContent="center">
+                <Heading id="menu-title" fontSize={"1.752rem"} m={5}>Menu</Heading>
+                <Container display={"flex"}
+                           flexDirection={"row"}
+                           justifyContent={"space-around"}
+                           m={5}
+                           p={0}>
+                    {categories.map((category, index) => (
+                        <Box key={index} id="category-menu" {...commonMenuStyles} p={0}>
+                            <Link w={200} fontSize="19px" color="accentSecondary" fontWeight="bold" fontFamily="heading"
+                                  href="/">{category.name}</Link>
+                            {category.subcategories.map((subcategory, subIndex) => (
+                                <Link key={subIndex} href="/">{subcategory}</Link>
+                            ))}
+                        </Box>
+                    ))}
+                </Container>
             </Container>
-        </Container>
-
-    )
-
-}
+        ) : (
+            <VStack id="dropdown-menu" align="start" spacing={4}>
+                {categories.map((category, index) => (
+                    <Box key={index} w="100%">
+                        <HStack justify="space-between" w="100%">
+                            <Text>{category.name}</Text>
+                            <IconButton id="menu-button"
+                                        icon={openCategory === index ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                                        onClick={() => toggleSubmenu(index)}
+                                        variant="ghost"
+                                        size="sm"
+                            />
+                        </HStack>
+                        {openCategory === index && (
+                            <VStack align="start" pl={4} spacing={2}>
+                                {category.subcategories.map((subcategory, subIndex) => (
+                                    <Text key={subIndex}>{subcategory}</Text>
+                                ))}
+                            </VStack>
+                        )}
+                    </Box>
+                ))}
+            </VStack>
+        )
+    );
+};

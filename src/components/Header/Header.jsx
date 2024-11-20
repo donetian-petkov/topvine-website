@@ -17,8 +17,6 @@ export const Header = (
     }
 ) => {
 
-    const [isSmallerThan430] = useMediaQuery('(max-width: 430px)');
-
 
     return (
         <Container as="header" id="header" maxW="100%" p="0" m="0" zIndex="9999" position="sticky" top={0}>
@@ -32,7 +30,7 @@ export const Header = (
                 h={["150px"]}
                 justifyContent="center"
                 alignItems="center"
-                direction={['column','column','column','row']}
+                direction={['column', 'column', 'column', 'row']}
                 gap="60px"
             >
                 <Logo/>
@@ -48,21 +46,17 @@ export const Header = (
 
             {isDrawerOpen && (
                 <Box id="dropdown-menu"
-                    position="absolute"
-                    top="150px"
-                    left="0"
-                    width="100%"
-                    bg="#d7dde2"
-                    boxShadow="md"
-                    p={4}
-                    zIndex="999"
+                     position="absolute"
+                     top="150px"
+                     left="0"
+                     width="100%"
+                     bg="#d7dde2"
+                     boxShadow="md"
+                     p={4}
+                     zIndex="999"
                 >
-                    {isSmallerThan430 ? (
-                        <DropdownMenuMobile/>
-                    )
-                    :(
-                            <DropdownMenu/>
-                        )}
+                    {<DropdownMenu/>
+                    }
 
                 </Box>
             )}
