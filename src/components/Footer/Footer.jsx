@@ -1,8 +1,8 @@
-import { Image, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Image, Heading, HStack, Text, Stack, VStack } from "@chakra-ui/react";
 
 export const Footer = () => {
     return (
-        <HStack
+        <Stack direction={['column', 'column', 'row']}
             as="footer"
             bg="accentPrimary"
             padding="60px"
@@ -26,6 +26,6 @@ export const Footer = () => {
                 <Image pl="41px" src="/img/twitter.png" />
                 <Image pl="41px" src="/img/facebook.png" />
             </HStack>
-        </HStack>
+        </Stack>
     );
 };

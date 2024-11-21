@@ -20,8 +20,8 @@ export const About = () => {
             <Heading fontSize="26px" textAlign="start">
                 Why Trust Fluidtrol?
             </Heading>
-            <Stack textAlign="left" fontSize="16px" mt="50px" mb="50px" position={['column', 'column', 'row']}>
-                <VStack w="330px" alignItems="baseline">
+            <Stack textAlign="left" fontSize="16px" mt="50px" mb="50px" direction={['column','column','row']}>
+                <VStack alignItems="baseline">
                     <Text fontWeight="bold">ISO 9001:2008 Certified</Text>
                     <Text>
                         Our quality system certification ensures the highest manufacturing
@@ -42,7 +42,7 @@ export const About = () => {
                         low.
                     </Text>
                 </VStack>
-                <VStack w="330px" alignItems="baseline">
+                <VStack alignItems="baseline">
                     <Text fontWeight="bold">Material Selection</Text>
                     <Text>
                         We use the highest quality PVC, CPVC, PP, PVDF, FRP, and Stainless

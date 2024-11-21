@@ -23,14 +23,15 @@ export const NavMenu = ({ isDrawerOpen, toggleDrawer }) => {
       spacing={["20px", "20px", "60px"]}
       top={[5, 5, "auto"]}
       position={["absolute", "absolute", "relative"]}
-      left={[280, 280, "auto"]}
+      left={[290, 290, "auto"]}
+      pt={[2, 2, "auto"]}
     >
-      <Link id="cart" href="/cart" {...commonLinkStyles}>
+      <Link id="cart" href="/cart" {...commonLinkStyles} fontSize={["14px",'14px','auto']}>
         <CartIcon alt="cart" w="100%" h="27px" />
         cart
       </Link>
 
-      <Link id="login" href="/login" {...commonLinkStyles}>
+      <Link id="login" href="/login" {...commonLinkStyles} fontSize={["14px",'14px','auto']}>
         <UserIcon alt="login" w="100%" h="27px" />
         login
       </Link>
@@ -40,9 +41,10 @@ export const NavMenu = ({ isDrawerOpen, toggleDrawer }) => {
         variant="unstyled"
         {...commonLinkStyles}
         onClick={toggleDrawer}
+        fontSize={["14px",'14px','auto']}
       >
         {!isDrawerOpen ? (
-          <MenuIcon id="open-button" alt="menu" w="100%" h="27px" />
+          <MenuIcon id="open-button" alt="menu" w="100%" h="27px"  />
         ) : (
           <CloseIcon id="close-button" />
         )}

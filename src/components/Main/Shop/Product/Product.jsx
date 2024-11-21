@@ -14,7 +14,7 @@ export const Product = ({
                             productImg = "aquatic.png",
                         }) => {
     return (
-        <Card w="100%" alignItems="center" variant="unstyled">
+        <Card w="100%" alignItems="center" variant="unstyled" p={['10px', '10px', 'auto']}>
             <CardBody border="none" textAlign="center">
                 <Heading fontSize="24px">{category}</Heading>
                 <Text fontSize="24px">Basket Strainers</Text>
@@ -22,6 +22,7 @@ export const Product = ({
                     <Image
                         src={`/img/${productImg}`}
                         alt="Green double couch with wooden legs"
+                        p={['10px', '10px', 'auto']}
                     />
                 </Link>
             </CardBody>
