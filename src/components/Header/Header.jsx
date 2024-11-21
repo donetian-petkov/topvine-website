@@ -1,7 +1,7 @@
 import {
     Flex,
     Container,
-    Box, useMediaQuery,
+    Box,
 } from "@chakra-ui/react";
 import {DropdownMenu} from "./DropdownMenu.jsx";
 import {Logo} from "./Logo.jsx";
