@@ -5,7 +5,7 @@ import {
     Image,
     HStack,
     VStack,
-    Button,
+    Button, Stack,
 } from "@chakra-ui/react";
 
 export const About = () => {
@@ -20,7 +20,7 @@ export const About = () => {
             <Heading fontSize="26px" textAlign="start">
                 Why Trust Fluidtrol?
             </Heading>
-            <HStack textAlign="left" fontSize="16px" mt="50px" mb="50px">
+            <Stack textAlign="left" fontSize="16px" mt="50px" mb="50px" position={['column', 'column', 'row']}>
                 <VStack w="330px" alignItems="baseline">
                     <Text fontWeight="bold">ISO 9001:2008 Certified</Text>
                     <Text>
@@ -65,7 +65,7 @@ export const About = () => {
                     </Text>
                 </VStack>
                 <Image src="/img/about.png"/>
-            </HStack>
+            </Stack>
             <Heading
                 fontSize="24px"
                 textAlign="center"
