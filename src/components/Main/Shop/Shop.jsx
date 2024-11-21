@@ -1,4 +1,4 @@
-import { Text, Box, Container, Button, Heading, HStack, VStack } from "@chakra-ui/react";
+import {Text, Box, Container, Button, Heading, HStack, VStack, Stack} from "@chakra-ui/react";
 import { Product } from "./Product/Product.jsx";
 
 export const Shop = () => {
@@ -29,11 +29,11 @@ export const Shop = () => {
             >
                 Product Categories
             </Text>
-            <HStack mt="47px" mb="278px">
+            <Stack mt="47px" mb="278px" direction={['column', 'column', 'row']}>
                 <Product category="Aquatic" productImg="aquatic.png" />
                 <Product category="General Water" productImg="generalWater.png" />
                 <Product category="Industrial" productImg="industrial.png" />
-            </HStack>
+            </Stack>
             <Text
                 alignContent="center"
                 bg="accentPrimary"
@@ -46,11 +46,11 @@ export const Shop = () => {
             >
                 Solutions
             </Text>
-            <HStack mt="47px">
+            <Stack mt="47px" direction={['column', 'column', 'row']}>
                 <Product category="Aquatic" productImg="aquatic.png" />
                 <Product category="General Water" productImg="generalWater.png" />
                 <Product category="Industrial" productImg="industrial.png" />
-            </HStack>
+            </Stack>
         </>
     );
 };
