@@ -21,7 +21,7 @@ function App() {
         console.log(event.target)
         console.log(event.target.id)
         if (![/plus/,
-            /menu/,
+            /menu*/,
             /dropdown-menu/,
             /open-button/,
             /close-button/,

@@ -70,7 +70,7 @@ export const DropdownMenu = () => {
 
     return (
         !isSmallerThan430 ? (
-            <DropdownMenuDesktop categories={categories} commonMenuStyles={commonMenuStyles}/>
+            <DropdownMenuDesktop categories={categories} commonMenuStyles={commonMenuStyles} openCategory={openCategory} toggleSubmenu={toggleSubmenu}/>
         ) : (
             <DropdownMenuMobile categories={categories} openCategory={openCategory} toggleSubmenu={toggleSubmenu}/>
         )
