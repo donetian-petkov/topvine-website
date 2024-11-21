@@ -1,4 +1,7 @@
-import {Image, Heading, HStack, Text, Stack, VStack, useMediaQuery} from "@chakra-ui/react";
+import {Image, Heading, HStack, Text, Stack, VStack, Link, useMediaQuery, Icon} from "@chakra-ui/react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+
 
 export const Footer = () => {
 
@@ -26,16 +29,37 @@ export const Footer = () => {
                         <Text fontSize="18px">or send an email to: fpt@fluidtrol.com</Text>
                     </VStack>
                     <HStack pb={5}>
-                        <Image pl="41px" src="/img/linkedin.png"/>
-                        <Image pl="41px" src="/img/twitter.png"/>
-                        <Image pl="41px" src="/img/facebook.png"/>
+                        <Link
+                            href="https://www.linkedin.com/company/fluidtrol-process-technologies-inc-/"
+                            isExternal
+                        >
+                            <Icon
+                                as={FontAwesomeIcon}
+                                icon={faLinkedinIn}
+                                bg="#8492A1"
+                                color="#002345"
+                                fontSize="24px"
+                                borderRadius="5px"
+                                p="5px"
+                            />
+                        </Link>
+                        <Link href="https://x.com/fluidtrol" isExternal>
+                            <Image pl="41px" src="/img/twitter.png" />
+                        </Link>
+                        <Link
+                            href="https://www.facebook.com/profile.php?id=100054308419009"
+                            isExternal
+                        >
+                            <Image pl="41px" src="/img/facebook.png" />
+                        </Link>
                     </HStack>
+
                 </>
 
             }
 
             <Text color="backgroundPrimary" fontSize="14px">
-                © 2023 Fluidtrol Process Technologies, Inc. {!isSmallerThan430 && <br/> }
+                © 2023 Fluidtrol Process Technologies, Inc. {!isSmallerThan430 && <br/>}
                 All Rights Reserved
             </Text>
 
@@ -49,10 +73,31 @@ export const Footer = () => {
                         <Text fontSize="18px">or send an email to: fpt@fluidtrol.com</Text>
                     </VStack>
                     <HStack>
-                        <Image pl="41px" src="/img/linkedin.png"/>
-                        <Image pl="41px" src="/img/twitter.png"/>
-                        <Image pl="41px" src="/img/facebook.png"/>
+                        <Link
+                            href="https://www.linkedin.com/company/fluidtrol-process-technologies-inc-/"
+                            isExternal
+                        >
+                            <Icon
+                                as={FontAwesomeIcon}
+                                icon={faLinkedinIn}
+                                bg="#8492A1"
+                                color="#002345"
+                                fontSize="24px"
+                                borderRadius="5px"
+                                p="5px"
+                            />
+                        </Link>
+                        <Link href="https://x.com/fluidtrol" isExternal>
+                            <Image pl="41px" src="/img/twitter.png" />
+                        </Link>
+                        <Link
+                            href="https://www.facebook.com/profile.php?id=100054308419009"
+                            isExternal
+                        >
+                            <Image pl="41px" src="/img/facebook.png" />
+                        </Link>
                     </HStack>
+
                 </>
             }
         </Stack>
